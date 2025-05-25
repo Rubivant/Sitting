@@ -23,7 +23,7 @@ public class SeatingArrangement {
 
         // Ввод информации об учениках
         while (true) {
-            System.out.print("Введите имя ученика (или пустую строку для завершения): ");
+            System.out.print("Введите имя ученика : ");
             String name = scanner.nextLine().trim();
             if (name.isEmpty()) break;
 
@@ -34,14 +34,14 @@ public class SeatingArrangement {
 
             Student student = new Student(name);
 
-            System.out.print("Кого " + name + " любит (через запятую): ");
+            System.out.print("Кого " + name + " любит : ");
             String likesInput = scanner.nextLine();
             for (String like : likesInput.split(",")) {
                 like = like.trim();
                 if (!like.isEmpty()) student.likes.add(like);
             }
 
-            System.out.print("Кого " + name + " не любит (через запятую): ");
+            System.out.print("Кого " + name + " не любит : ");
             String dislikesInput = scanner.nextLine();
             for (String dislike : dislikesInput.split(",")) {
                 dislike = dislike.trim();
